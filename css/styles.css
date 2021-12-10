@@ -1,0 +1,10 @@
+.h1{
+  color: brown;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: brown;
+}
+.p{
+  color: rgb(8, 8, 8);
+  background-color: grey;
+}
