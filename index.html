@@ -11,14 +11,53 @@
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
-<body class="container" style="background-image: url(/assets/ghanapeople.jpeg); height: 50vh;" >
-    <div class="container">
+<body class="container" style="background-color: rgb(170, 155, 155);" >
+    <div class="container" style="background-image: url(/assets/ghanapeople.jpeg);" >
       <div class="container">
         <div class="row">
           <div class="col-sm">
             <h1 class="h1">AKAN NAME CALCULATOR</h1>
             <p class="p">The Akan people are an ethnic group that lives primarily in modern-day Ghana and Ivory Coast. The name Akan actually refers to the language of the Akan clan. Delving into their language, we see that they have a unique naming system derived from their culture. The first name a new-born child is given, "A day name", is usually given corresponding to the day of the week that they were born as shown below. These names come in two sets with one for male children and another for female children assigned to a specific day of the week. </p>
+            
             <p class="p">This page contains an application that one can enter their date of birth and from it get what their Akan name would be had they been born into the Akan tribe. Lets spread the Akan culture one person at a time! </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <h2>User Details</h2>
+            <form>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="number" class="form-label">Date of Birth:</label>
+                  <input type="number" class="form-control" id="date" placeholder="Date of month(1-31)" name="date">
+                </div>
+                <div class="form-group">
+                  <label for="number" class="form-label">Month of Birth:</label>
+                  <input type="number" class="form-control" id="date" placeholder="Month of birth(1-12)" name="month">
+                </div>
+                <div class="form-group">
+                  <label for="number" class="form-label">Year of Birth:</label>
+                  <input type="number" class="form-control" id="date" placeholder="Year of birth(e.g. 2001)" name="date">
+                </div>
+                <h5>Gender</h5>
+                <div class="radio">
+                  <label class="radio-inline"><input type="radio" name="optradio" unchecked>Male</label>
+                </div>
+                <div class="radio">
+                  <label class="radio-inline"><input type="radio" name="optradio">Female</label>
+                </div>
+              </div>
+                  <button type="submit" class="btn btn-primary" onclick="">Submit</button>
+              </form>
+                </div>
+               
+              </form>
+              
+              
+            </form>
+            </form>
+          </div>
+        </div>
 
   </div>
   
