@@ -1,22 +1,19 @@
 .h1{
-  color: rgb(14, 10, 10);
+  color: black;
   font-weight: bold;
   text-align: center;
 }
 .p{
-  color: rgb(8, 8, 8);
+  color: white;
   background-color: rgb(141, 133, 133);
   padding: 10px;
   margin: 10;
 }
-#h2{
-  text-align: center;
-}
 form{
-  width: 50%;
+  width: 35%;
 }
 .btn {
-  background-color: #4CAF50; /* Green */
+  background-color: rgb(141, 133, 133);
   border: none;
   color: black;
   padding: 15px 32px;
@@ -29,4 +26,16 @@ form{
 }
 table, th, td {
   border: 1px solid black;
+  width: 30%;
+  height: 30px;
+  background-color: rgb(141, 133, 133);
+}
+#footer{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+  
+  
+
 }
