@@ -28,12 +28,58 @@ function getDate(){
 var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7;
   console.log(d);
 }
-function selectGender({
+function selectGender(){
   var genderUser = document.getElementsByName("gender");
   if (genderUser[0].checked == true){
-    var gender = "male";
+    var gender = "Male";
   }
   else if(genderUser[1].checked == true){
-    var gender = "female";
+    var gender = "Female";
   }
-})
+}
+if (gender ==''){
+  alert("select a required gender");
+}
+else if (d ==1 && gender == "Male"){
+  alert("Your akan name is " +namesMale[0]+ "as you were born on a " +days[0]+".")
+}
+else if (d ==2 && gender == "Male"){
+  alert("Your akan name is " +namesMale[1]+ "as you were born on a " +days[1]+".")
+}
+else if (d ==3 && gender == "Male"){
+  alert("Your akan name is " +namesMale[2]+ "as you were born on a " +days[2]+".")
+}
+else if (d ==4 && gender == "Male"){
+  alert("Your akan name is " +namesMale[3]+ "as you were born on a " +days[3]+".")
+}
+else if (d ==5 && gender == "Male"){
+  alert("Your akan name is " +namesMale[4]+ "as you were born on a " +days[4]+".")
+}
+else if (d ==6 && gender == "Male"){
+  alert("Your akan name is " +namesMale[5]+ "as you were born on a " +days[5]+".")
+}
+else if (d ==7 && gender == "Male"){
+  alert("Your akan name is " +namesMale[6]+ "as you were born on a " +days[6]+".")
+}
+else if (d ==1 && gender == "Female"){
+  alert("Your akan name is " +namesFemale[0]+ "as you were born on a " +days[0]+".")
+}
+else if (d ==2 && gender == "Female"){
+  alert("Your akan name is " +namesFemale[1]+ "as you were born on a " +days[1]+".")
+}
+else if (d ==3 && gender == "Female"){
+  alert("Your akan name is " +namesMale[2]+ "as you were born on a " +days[2]+".")
+}
+else if (d ==4 && gender == "Female"){
+  alert("Your akan name is " +namesMale[3]+ "as you were born on a " +days[3]+".")
+}
+else if (d ==5 && gender == "Female"){
+  alert("Your akan name is " +namesFemale[4]+ "as you were born on a " +days[4]+".")
+}
+else if (d ==6 && gender == "Female"){
+  alert("Your akan name is " +namesFemale[5]+ "as you were born on a " +days[5]+".")
+}
+else if (d ==7 && gender == "Female"){
+  alert("Your akan name is " +namesFemale[6]+ "as you were born on a " +days[6]+".")
+}
+}
