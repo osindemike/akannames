@@ -25,19 +25,19 @@
         <div class="row">
           <div class="col-sm">
             <h2>User Details</h2>
-            <form class="form1">
-              <form action="/action_page.php">
+            <form class="form1" name="formOne" onsubmit="detailsValidation();">
+              
                 <div class="form-group">
                   <label for="number" class="form-label">Date of Birth:</label>
-                  <input type="number" class="form-control" id="date" placeholder="Date of month(1-31)" name="date">
+                  <input type="number" id="date" class="form-control" placeholder="Date of month(1-31)" name="date">
                 </div>
                 <div class="form-group">
                   <label for="number" class="form-label">Month of Birth:</label>
-                  <input type="number" class="form-control" id="date" placeholder="Month of birth(1-12)" name="month">
+                  <input type="number" id="month" class="form-control"  placeholder="Month of birth(1-12)" name="month">
                 </div>
                 <div class="form-group">
                   <label for="number" class="form-label">Year of Birth:</label>
-                  <input type="number" class="form-control" id="date" placeholder="Year of birth(e.g. 2001)" name="date">
+                  <input type="number" id="year" class="form-control"  placeholder="Year of birth(e.g. 2001)" name="year">
                 </div>
                 <h5>Gender</h5>
                 <div class="radio">
@@ -49,7 +49,7 @@
                   <button type="submit" class="btn btn-primary" onclick=""; id="btn">Submit</button>
                 </div>
               </div>
-              </form>
+              
                 </div>
                
               </form>
@@ -102,6 +102,7 @@
                 <p id="footer">Michael Osinde 2021</p>
                 <p><a href="https://twitter.com/osindemike">Contact</a></p>
               </footer>
+              <script src="/js/scripts.js"></script>
               
               
             </form>
