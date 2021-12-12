@@ -25,8 +25,9 @@ YY = parseInt(year.slice(2,4));
 MM = parseInt(month);
 DD = parseInt(year);
 function getDate(){
-var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7;
+var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
   console.log(d);
+  return (Math.floor(d));
 }
 function selectGender(){
   var genderUser = document.getElementsByName("gender");
@@ -82,4 +83,8 @@ else if (d ==6 && gender == "Female"){
 else if (d ==7 && gender == "Female"){
   alert("Your akan name is " +namesFemale[6]+ "as you were born on a " +days[6]+".")
 }
+}
+function getAkanname(){
+d = getDate();
+selectGender();
 }
