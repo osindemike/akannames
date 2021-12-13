@@ -1,44 +1,34 @@
-function detailsValidation(){
-  var details1= parseInt(formone.date.value, 10)
-  if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
-  alert("Enter valid date of birth");
-  }
-  var details2= parseInt(formone.month.value, 10)
-  if (details2<0 || details2>12){
-    alert("Enter a valid month")
-  }
-}
+function getAkanname(){
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var namesMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var namesFemale = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var CC;
-var YY;
-var MM;
-var DD;
-var d; 
+var MM = parseInt(document.getElementById("month").value);
+var DD = parseInt(document.getElementById("date").value);
 var year= document.getElementById("year").value;
-var month= document.getElementById("month").value;
-var date= document.getElementById("date").value;
-var genderUser;
-var gender;
-CC = parseInt(year.slice(0,2));
-YY = parseInt(year.slice(2,4));
-MM = parseInt(month);
-DD = parseInt(year);
-function getDate(){
-var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7) ;
-  console.log(d);
-  return (Math.floor(d));
-}
-function selectGender(){
-  var genderUser = document.getElementsByName("gender");
+var CC = parseInt(year.slice(0,2));
+var YY = parseInt(year.slice(2,4));
+var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+var genderUser = document.getElementsByName("gender");
+
+  if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
+  alert("Enter valid date of birth");
+
+  }
+  else if(document.formone.month.value == "" || document.formone.month.value >12 || document.formone.month.value <=0){
+    alert("Enter valid month of birth");
+  
+  }
+  else if(document.formone.year.value == "" || document.formone.year.value >2100 || document.formone.year.value <=1900){
+    alert("Enter valid year of birth");
+  
+  }
+
   if (genderUser[0].checked == true){
     var gender = "Male";
   }
   else if(genderUser[1].checked == true){
     var gender = "Female";
   }
-}
 if (gender ==''){
   alert("select a required gender");
 }
@@ -84,7 +74,4 @@ else if (d ==6 && gender == "Female"){
 else if (d ==7 && gender == "Female"){
   alert("Your akan name is " +namesFemale[6]+ "as you were born on a " +days[6]+".")
 }
-function getAkanname(){
-d = getDate();
-selectGender();
 }
