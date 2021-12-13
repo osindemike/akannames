@@ -1,3 +1,4 @@
+
 function getAkanname(){
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var namesMale = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
@@ -5,28 +6,26 @@ var namesFemale = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 var MM = parseInt(document.getElementById("month").value);
 var DD = parseInt(document.getElementById("date").value);
 var year= document.getElementById("year").value;
+var month= document.getElementById("month").value;
+var date= document.getElementById("date").value;
 var CC = parseInt(year.slice(0,2));
 var YY = parseInt(year.slice(2,4));
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
 var genderUser = document.getElementsByName("gender");
 
-  if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
+if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
   alert("Enter valid date of birth");
-
   }
-  else if(document.formone.month.value == "" || document.formone.month.value >12 || document.formone.month.value <=0){
+else if(document.formone.month.value == "" || document.formone.month.value >12 || document.formone.month.value <=0){
     alert("Enter valid month of birth");
-  
   }
-  else if(document.formone.year.value == "" || document.formone.year.value >2100 || document.formone.year.value <=1900){
+else if(document.formone.year.value == "" || document.formone.year.value >2100 || document.formone.year.value <=1900){
     alert("Enter valid year of birth");
-  
   }
-
-  if (genderUser[0].checked == true){
+if (genderUser[0].checked == true){
     var gender = "Male";
   }
-  else if(genderUser[1].checked == true){
+else if(genderUser[1].checked == true){
     var gender = "Female";
   }
 if (gender ==''){
