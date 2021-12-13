@@ -1,7 +1,7 @@
-function detailsValidation(formone){
+function detailsValidation(){
   var details1= parseInt(formone.date.value, 10)
-  if(details1<0 || details1>31){
-    alert("Enter valid date of birth");
+  if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
+  alert("Enter valid date of birth");
   }
   var details2= parseInt(formone.month.value, 10)
   if (details2<0 || details2>12){
@@ -20,12 +20,13 @@ var year= document.getElementById("year").value;
 var month= document.getElementById("month").value;
 var date= document.getElementById("date").value;
 var genderUser;
+var gender;
 CC = parseInt(year.slice(0,2));
 YY = parseInt(year.slice(2,4));
 MM = parseInt(month);
 DD = parseInt(year);
 function getDate(){
-var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7) ;
   console.log(d);
   return (Math.floor(d));
 }
@@ -82,7 +83,6 @@ else if (d ==6 && gender == "Female"){
 }
 else if (d ==7 && gender == "Female"){
   alert("Your akan name is " +namesFemale[6]+ "as you were born on a " +days[6]+".")
-}
 }
 function getAkanname(){
 d = getDate();

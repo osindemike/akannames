@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script>
 </head>
 <body class="container" style="background-color: rgb(170, 155, 155);" >
     <div class="container" style="background-image: url(/assets/people2.jpeg);" >
-      <div class="container">
         <div class="row">
           <div class="col-sm">
             <h1 class="h1">AKAN NAME CALCULATOR</h1>
@@ -28,25 +28,28 @@
             <form class="form1" name="formOne" onsubmit="detailsValidation();">
               
                 <div class="form-group">
-                  <label for="number" class="form-label">Date of Birth:</label>
+                  <label for="date">Date of Birth:</label>
                   <input type="number" id="date" class="form-control" placeholder="Date of month(1-31)" name="date">
                 </div>
                 <div class="form-group">
-                  <label for="number" class="form-label">Month of Birth:</label>
+                  <label for="month">Month of Birth:</label>
                   <input type="number" id="month" class="form-control"  placeholder="Month of birth(1-12)" name="month">
                 </div>
                 <div class="form-group">
-                  <label for="number" class="form-label">Year of Birth:</label>
+                  <label for="year" class="form-label">Year of Birth:</label>
                   <input type="number" id="year" class="form-control"  placeholder="Year of birth(e.g. 2001)" name="year">
                 </div>
                 <h5>Gender</h5>
                 <div class="radio">
-                  <label class="radio-inline"><input type="radio" name="gender" value="Male">Male</label>
+                  <label class="radio-inline"><input type="radio" name="gender" id="Male">&nbsp; Male
+                  </label>
                 </div>
                 <div class="radio">
-                  <label class="radio-inline"><input type="radio" name="gender" value="Female">Female</label>
+                  <label class="radio-inline"><input type="radio" name="gender" id="Female">&nbsp; Female
+                  </label>
                   <br>
                   <button type="submit" class="btn btn-primary" onclick="getAkanname()"; id="btn">Submit</button>
+                </form>
                 </div>
               </div>
               
@@ -102,10 +105,7 @@
                 <p id="footer">Michael Osinde 2021</p>
                 <p><a href="https://twitter.com/osindemike">Contact</a></p>
               </footer>
-              <script src="/js/scripts.js"></script>
-              
-              
-            </form>
+              <script src="js/scripts.js"></script>
           </div>
         </div>
 
@@ -114,7 +114,6 @@
   
 
         </div>
-      </div>
     
     </div>
   </div>
