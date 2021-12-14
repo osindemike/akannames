@@ -10,7 +10,7 @@ var month= document.getElementById("month").value;
 var date= document.getElementById("date").value;
 var CC = parseInt(year.slice(0,2));
 var YY = parseInt(year.slice(2,4));
-var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
+var d = parseFloat(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7);
 var genderUser = document.getElementsByName("gender");
 
 if(document.formone.date.value == "" || document.formone.date.value >31 || document.formone.date.value <=0){
@@ -22,16 +22,16 @@ else if(document.formone.month.value == "" || document.formone.month.value >12 |
 else if(document.formone.year.value == "" || document.formone.year.value >2100 || document.formone.year.value <=1900){
     alert("Enter valid year of birth");
   }
-if (genderUser[0].checked == true){
+else if (genderUser[0].checked == false && genderUser[1].checked ==false){
+    alert ("Kindly select one gender");
+  }
+else if(genderUser[0].checked == true){
     var gender = "Male";
   }
 else if(genderUser[1].checked == true){
     var gender = "Female";
-  }
-if (gender ==''){
-  alert("select a required gender");
 }
-else if (d ==1 && gender == "Male"){
+if (d ==1 && gender == "Male"){
   alert("Your akan name is " +namesMale[0]+ "as you were born on a " +days[0]+".")
 }
 else if (d ==2 && gender == "Male"){
