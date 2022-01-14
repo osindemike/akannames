@@ -14,7 +14,7 @@ var DD = parseInt(document.getElementById("date").value);
 var CC = parseInt(year.slice(0,2));
 var YY = parseInt(year.slice(2,4));
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD )%7;
-d=d.toFixed(0);
+d=Math.floor(d);
 
 if (gender== ""){
   alert("kindly select your gender");
